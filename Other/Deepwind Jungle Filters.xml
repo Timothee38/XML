@@ -1,1 +1,36 @@
-Holder
+<filters>
+    <filter name="only-blue">
+        <team>blue</team>
+    </filter>
+    <filter name="only-red" parents="deny-players">
+        <team>red</team>
+    </filter>
+    <filter name="no-void" parents="allow-all">
+        <deny>
+            <void/>
+        </deny>
+    </filter>
+</filters>
+
+
+<regions>
+    <union name="blue-wool-rooms">
+        <rectangle name="green-room" min="17,66" max="37,79"/>
+        <rectangle name="cyan-room" min="-17,66" max="-37,79"/>
+    </union>
+    <apply block="only-blue">
+        <region name="blue-wool-rooms"/>
+    </apply>
+    <apply enter="only-blue" message="You may not enter your own wool room!">
+        <region name="blue-wool-rooms"/>
+    </apply>
+    <union name="red-wool-rooms">
+        <rectangle name="purple-room" min="-17,-65" max="-37,-78"/>
+        <rectangle name="yellow-room" min="17,-65" max="37,-78"/>
+    </union>
+    <apply block="only-red">
+        <region name="red-wool-rooms"/>
+    </apply>
+    <apply enter="only-red" message="You may not enter your own wool room!">
+        <region name="red-wool-rooms"/>
+    </apply>
