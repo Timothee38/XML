@@ -21,8 +21,6 @@
         </deny>
     </filter>
 </filters>
-
-
 <regions>
     <union name="blue-wool-rooms">
         <rectangle name="green-room" min="17,66" max="37,79"/>
