@@ -1,10 +1,21 @@
 <filters>
+    <filter name="only-blue-blocks">
+        <block>glass</block>
+        <block>fence</block>
+        <not><team>red</team></not>
+    </filter>
     <filter name="only-blue">
         <team>blue</team>
     </filter>
-    <filter name="only-red" parents="deny-players">
+    <filter name="only-red-blocks">
+        <block>glass</block>
+        <block>fence</block>
+        <not><team>blue</team></not>
+    </filter>
+    <filter name="only-red">
         <team>red</team>
     </filter>
+    <filter name
     <filter name="no-void" parents="allow-all">
         <deny>
             <void/>
@@ -18,7 +29,7 @@
         <rectangle name="green-room" min="17,66" max="37,79"/>
         <rectangle name="cyan-room" min="-17,66" max="-37,79"/>
     </union>
-    <apply block="only-blue">
+    <apply block="only-blue-blocks">
         <region name="blue-wool-rooms"/>
     </apply>
     <apply enter="only-blue" message="You may not enter your own wool room!">
@@ -28,7 +39,7 @@
         <rectangle name="purple-room" min="-17,-65" max="-37,-78"/>
         <rectangle name="yellow-room" min="17,-65" max="37,-78"/>
     </union>
-    <apply block="only-red">
+    <apply block="only-red-blocks">
         <region name="red-wool-rooms"/>
     </apply>
     <apply enter="only-red" message="You may not enter your own wool room!">
