@@ -15,7 +15,6 @@
     <filter name="only-red">
         <team>red</team>
     </filter>
-    <filter name
     <filter name="no-void" parents="allow-all">
         <deny>
             <void/>
