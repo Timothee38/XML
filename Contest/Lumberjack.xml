@@ -14,6 +14,7 @@
     <contributor contribution="XML">matic0basle</contributor>
     <contributor contribution="XML Additions and Fixing">ItsMiiOlly</contributor>
     <contributor contribution="XML Editing and Packaging">kalikakitty</contributor>
+    <contributor contribution="Final XML Fixes">orky48</contributor>
 </contributors>
 <teams>
     <team color="blue" max="36" max-overfill="40">Blue Team</team>
@@ -133,10 +134,10 @@
     <portal filter="only-blue" x="@-4" y="@29" z="@-114">
         <cuboid name="blue-portal-1" min="-22,30,-122" max="-23,32,-118"/>
     </portal>
-    <portal filter="only-blue" x="@-70" y="@29" z="-114">
+    <portal filter="only-blue" x="@-70" y="@29" z="@-114">
         <cuboid name="blue-portal-2" min="-50,30,-120" max="-54,32,-121"/>
     </portal>
-    <portal filter="only-blue" x="@-70" y="@29" z="-114">
+    <portal filter="only-blue" x="@-70" y="@29" z="@-114">
         <cuboid name="blue-portal-3" min="-52,30,-139" max="-51,32,-143"/>
     </portal>
     <portal filter="only-blue" x="@-4" y="@29" z="@-114">
