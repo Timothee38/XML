@@ -100,7 +100,7 @@
         <rectangle name="middle-middle" min="-62,-71" max="-13,-39"/>
         <rectangle name="middle-left" min="-103,-66" max="-92,-43"/>
     </union>
-    <apply block="no-void">
+    <apply block="no-void" message="You may not edit the void!">
         <negative>
             <region name="middle-areas"/>
         </negative>   
