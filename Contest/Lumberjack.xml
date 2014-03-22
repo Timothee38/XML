@@ -48,7 +48,7 @@
     <filter name="only-red">
         <team>red</team>
     </filter>
-    <filter name="onl-blue">
+    <filter name="only-blue">
         <team>blue</team>
     </filter>
     <filter name="no-void" parents="allow-all">
