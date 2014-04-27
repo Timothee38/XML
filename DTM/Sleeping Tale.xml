@@ -2,7 +2,7 @@
 <name>Sleeping Tale</name>
 <version>2.0.0</version>
 <objective>
-    Attackers must capture the defenders wool withing 20 minutes. Defenders must defend the wool for 20 minutes
+    Attackers must destroy the monument within 20 minutes. Defenders must defend it.
 </objective>
 <authors>
     <author>orky48</author>
@@ -13,7 +13,7 @@
 </contributors>
 <teams>
     <team color="blue" max="12" max-overfill="12">Defenders</team>
-    <team color="light purple" max="8" max-overfill="8">Attackers</team>
+    <team color="dark red" max="8" max-overfill="8">Attackers</team>
 </teams>
 <kits>
     <kit name="spawn">
@@ -116,6 +116,11 @@
     <tool>wood pickaxe</tool>
     <tool>stone pickaxe</tool>
 </toolrepair>
+<mobs>
+    <filter>
+        <spawn>natural</spawn>
+    </filter>
+</mobs>
 <blockdrops>
     <rule>
         <block>coal ore</block>
@@ -217,6 +222,28 @@
         <wrongtool>true</wrongtool>
     </rule>
 </blockdrops>
+<renewables>
+<!--Defenders renewables -->
+    <renewable rate="1" grow="false" particles="false" sound="false" avoid-entities="false">
+        <region>
+            <cuboid min="124,16,-98" max="160,16,-93"/>
+        </region>
+        <renew>brick</renew>
+        <renew>redstone ore</renew>
+        <renew>lapis ore</renew>
+        <renew>diamond block</renew>
+        <renew>obsidian</renew>
+        <replace>air</replace>
+    </renewable>
+    <renewable rate="1" grow="false" particles="false" sound="false" avoid-entities="false">
+        <region>
+            <cuboid min="165,14,58" max="186,18,95"/>
+        </region>
+        <renew>anvil</renew>
+        <renew>iron block</renew>
+        <replace>air</replace>
+    </renewable>
+</renewables>
 <include src="tutorial.xml"/>
 <tutorial>
     <stage title="A/D Capture the Wool">
@@ -264,36 +291,4 @@
         <cuboid name="portal-2" min="142,30,27" max="143,27,28"/>
     </portal>
 </portals>
-<proximity-alarms>
-    <proximity-alarm message="A attacker has entered the wool room!" flare-radius="11">
-        <region>
-            <region name="wool-room"/>
-        </region>
-        <detect>
-            <team>attackers</team>
-        </detect>
-    </proximity-alarm>
-</proximity-alarms>
-<renewables>
-<!--Defenders renewables -->
-    <renewable rate="1" grow="false" particles="false" sound="false" avoid-entities="false">
-        <region>
-            <cuboid min="124,16,-98" max="160,16,-93"/>
-        </region>
-        <renew>brick</renew>
-        <renew>redstone ore</renew>
-        <renew>lapis ore</renew>
-        <renew>diamond block</renew>
-        <renew>obsidian</renew>
-        <replace>air</replace>
-    </renewable>
-    <renewable rate="1" grow="false" particles="false" sound="false" avoid-entities="false">
-        <region>
-            <cuboid min="165,14,58" max="186,18,95"/>
-        </region>
-        <renew>anvil</renew>
-        <renew>iron block</renew>
-        <replace>air</replace>
-    </renewable>
-</renewables>
 </map>
