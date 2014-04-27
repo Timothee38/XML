@@ -11,9 +11,6 @@
 <contributors>
     <contributor contribution="Back wall design and feedback">Lyzak</contributor>
 </contributors>
-<rules>
-    <rule>Do not steal other players block drops!</rule>
-</rules>
 <teams>
     <team color="blue" max="12" max-overfill="12">Defenders</team>
     <team color="light purple" max="8" max-overfill="8">Attackers</team>
