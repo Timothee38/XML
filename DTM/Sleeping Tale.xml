@@ -76,15 +76,6 @@
     <apply enter="spawn-protection">
         <region name="spawns"/>
     </apply>
-    <apply block="magenta-wool" message="You may not edit blocks in your wool room!">
-        <circle name="wool-room" center="107.5,84.5" radius="9"/>
-    </apply>
-    <apply enter="magenta-wool" message="You may not enter your own wool room!">
-        <region name="wool-room"/>
-    </apply>
-    <apply block="wool-spawner" message="You may not break the spawner!">
-        <region name="wool-room"/>
-    </apply>
 </regions>
 <wools team="attackers">
     <wool color="magenta">
