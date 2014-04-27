@@ -1,0 +1,132 @@
+<?xml version="1.0"?>
+<map proto="1.3.2">
+<name>Diluvium</name>
+<version>1.0.0</version>
+<objective>Capture the other team's wool in order to win the game!</objective>
+ 
+<authors>
+        <author contribution="Main builder">Arzanex</author>
+        <author contribution="Tweaking, aesthetics, and feedback">MapleMint</author>
+</authors>
+ 
+<contributors>
+        <contributor contribution="Aesthetics">matic0basle</contributor>
+        <contributor contribution="Server support & feedback">iLifting</contributor>
+        <contributor contribution="Spawner help">_IQ</contributor>
+        <contributor contribution="XML">CYXEtan</contributor>
+</contributors>
+ 
+<rules>
+        <rule>Block glitching is prohibited in all ways (including but not limited to nala jumping)</rule>
+        <rule>Water may not obstruct more than 50% of a lane</rule>
+</rules>
+ 
+<teams>
+        <team color="blue" max="16" max-overfill="20">Blue Team</team>
+        <team color="dark red" max="16" max-overfill="20">Red Team</team>
+</teams>
+ 
+<spawns>
+        <spawn team="red" kit="red" yaw="180">
+                <cuboid min="71,40,113" max="70,40,112"/>
+        </spawn>
+        <spawn team="blue" kit="blue" yaw="0">
+                <cuboid min="70,40,-10" max="71,40,-9"/>
+        </spawn>
+        <default yaw="270">
+                <cuboid min="128,51,52" max="129,51,51"/>
+        </default>
+</spawns>
+ 
+<kits>
+        <kit name="spawn">
+                <item slot="0">stone sword</item>
+                <item slot="1">bow</item>
+                <item slot="28" amount="32">arrow</item>
+                <item slot="2" enchantment="durability:1">iron pickaxe</item>
+                <item slot="3" amount="64">cobblestone</item>
+                <item slot="7" amount="2">golden apple</item>
+                <item slot="8" amount="32">steak</item>
+        </kit>
+        <kit name="red" parents="spawn">
+                <helmet color="cd0000">leather helmet</helmet>
+                <chestplate color="cd0000">leather chestplate</chestplate>
+                <leggings color="cd0000">leather leggings</leggings>
+                <boots color="cd0000">leather boots</boots>
+        </kit>
+        <kit name="blue" parents="spawn">
+                <helmet color="0066cc">leather helmet</helmet>
+                <chestplate color="0066cc">leather chestplate</chestplate>
+                <leggings color="0066cc">leather leggings</leggings>
+                <boots color="0066cc">leather boots</boots>
+        </kit>
+</kits>
+ 
+<toolrepair>
+        <tool>stone sword</tool>
+        <tool>bow</tool>
+        <tool>iron pickaxe</tool>
+</toolrepair>
+ 
+<wools team="red">
+        <wool color="purple">
+                <block>70,47,109</block>
+        </wool>
+        <wool colour"pink">
+                <block>71,47,109</block>
+        </wool>
+</wools>
+<wools team="blue">
+        <wool color="lime">
+                <block>71,47,-6</block>
+        </wool>
+        <wool colour"yellow">
+                <block>70,47,-6</block>
+        </wool>
+</wools>
+ 
+<maxbuildheight>67</maxbuildheight>
+ 
+<regions>
+        <apply block-place="deny-all" message="You may not interact with the void!">
+                <union>
+                        <cuboid name="red-voidgap" min="79,32,117" max="62,67,154"/>
+                        <cuboid name="red-sidevoid" min="106,24,14" max="90,67,-51"/>
+                        <cuboid name="red-backvoid" min="52,45,160" max="106,67,155"/>
+                </union>
+                <union>
+                        <cuboid name="blue-voidgap" min="79,32,-14" max="62,67,-51"/>
+                        <cuboid name="blue-sidevoid" min="35,25,14" max="51,67,-51"/>
+                        <cuboid name="blue-backvoid" min="35,45,-57" max="106,67,-52"/>
+                </union>
+        </apply>
+        <union name="red-woolrooms">
+                <cuboid min="89,45,143" max="80,67,154"/>
+                <cuboid min="52,45,143" max="61,67,154"/>
+        </union>
+        <apply enter="only-red" message="You may not enter your own wool room!">
+                <region name="red-woolrooms"/>
+        </apply>
+        <apply block="deny-all" block-place="only-red">
+                <region name="red-woolrooms"/>
+        </apply>
+        <apply enter="only-red" block="deny-all" message="You may not enter your opponent's team spawn!>
+                <cuboid name="76,46,107" max="65,67,116"/>
+ 
+        <union name="blue-woolrooms">
+                <cuboid min="52,45,-40" max="61,67,-51"/>
+                <cuboid min="89,45,-40" max="80,67,-51"/>
+        </union>
+        <apply enter="only-blue" message="You may not enter your own wool room!">
+                <region name="blue-woolrooms"/>
+        </apply>
+        <apply block="deny-all" block-place="only-blue">
+                <region name="blue-woolrooms"/>
+        </apply>
+        <apply enter="only-blue" block="deny-all" message="You may not enter your opponent's team spawn!>
+                <cuboid min="76,46,-4" max="65,67,-13"/>
+        </apply>
+ 
+</regions>
+ 
+</map>
