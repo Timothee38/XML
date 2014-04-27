@@ -77,11 +77,19 @@
         <region name="spawns"/>
     </apply>
 </regions>
-<wools team="attackers">
-    <wool color="magenta">
-        <block>142.5,17,-91.5</block>
-    </wool>
-</wools>
+<modes>
+    <mode after="1m" material="95" name="`eAttackers Released"/>
+    <mode after="5m" material="95:1" name="`e[Name] Class Unlocked"/>
+    <mode after="10m" material="95:2"name="`e[Name] Class Unlocked"/>
+    <mode after="13m" material="95:3" name="`e[Name] Class Unlocked"/>
+    <mode after="15m" material="95:4" name="`e[Name] Class Unlocked"/>
+    <mode after="17m" material="95:5" name="`e[Name] Class Unlocked"/>
+</modes>
+<destroyables>
+    <destroyable owner="defenders" materials="emerald or sponge ect.">
+        <cuboid min="x,y,z" max="x,y,z"/>
+    </destroyable>
+</destroyables>
 <time result="defenders">20m</time>
 <maxbuildheight>35</maxbuildheight>
 <difficulty>3</difficulty>
