@@ -92,6 +92,22 @@
     <filter name="portal-defender">
         <team>defenders</team>
     </filter>
+    <!--For timed kits-->
+    <filter name="Tier 1">
+        <block>95</block>
+    </filter>
+    <filter name="Tier 2">
+        <block>95:1</block>
+    </filter>
+    <filter name="Tier 3">
+        <block>95:2</block>
+    </filter>
+    <filter name="Tier 4">
+        <block>95:3</block>
+    </filter>
+    <filter name="Tier 5">
+        <block>95:4</block>
+    </filter>
 </filters>
 <regions>
     <union name="spawns">
@@ -120,13 +136,29 @@
     <apply enter="spawn-protection">
         <region name="spawns"/>
     </apply>
+    <!--Protecting and applying kits -->
+    <apply block="Tier 1" message="This kit will unlock one minute into the game">
+        <cuboid name="Kit-room-1" min="x,y,z" max="x,y,z"/>
+    </apply>
+    <apply block="Tier 2" message="This kit will unlock four minutes into the game">
+        <cuboid name="Kit-room-2" min="x,y,z" max="x,y,z"/>
+    </apply>
+    <apply block="Tier 3" message="This kit will unlock seven minutes into the game">
+        <cuboid name="Kit-room-3" min="x,y,z" max="x,y,z"/>
+    </apply>
+    <apply block="Tier 4" message="This kit will unlock thirt-teen minutes into the game">
+        <cuboid name="Kit-room-4" min="x,y,z" max="x,y,z"/>
+    </apply>
+    <apply block="Tier 5" message="This kit will unlock seven-teen minutes into the game">
+        <cuboid name="Kit-room-5" min="x,y,z" max="x,y,z"/>
+    </apply>
 </regions>
 <modes>
     <mode after="1m" material="95" name="`eAttackers Released"/>
     <mode after="5m" material="95:1" name="`eTier 2 Kit Unlocked"/>
-    <mode after="10m" material="95:2" name="`eTier 3 Kit Unlocked"/>
+    <mode after="7m" material="95:2" name="`eTier 3 Kit Unlocked"/>
     <mode after="13m" material="95:3" name="`eTier 4 Kit Unlocked"/>
-    <mode after="15m" material="95:4" name="`eTier 5 Kit Unlocked"/>
+    <mode after="17m" material="95:4" name="`eTier 5 Kit Unlocked"/>
 </modes>
 <destroyables name="Monument" materials="emerald or sponge ect.">
     <destroyable owner="defenders">
