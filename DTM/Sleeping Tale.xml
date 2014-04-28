@@ -17,13 +17,57 @@
 </teams>
 <kits>
     <kit name="spawn">
-        <item slot="0">wood pickaxe</item>
-        <item slot="1" amount="10">apple</item>
+        <item slot="2">wood pickaxe</item>
+        <item slot="8" amount="10">apple</item>
         <potion duration="2" amplifier="1">heal</potion>
+    </kit>
+    <kit name="Tier 1" parents="spawn">
+        <item slot="0">wood sword</item>
+        <item slot="1">bow</item>
+        <item slot="28" amount="16">arrow</item>
+        <item slot="3" amount="16">wood</item>
+        <leggings>leather leggings</leggings>
+    </kit>
+    <kit name="Tier 2" parents="spawn">
+        <item slot="0">wood sword</item>
+        <item slot="1">bow</item>
+        <item slot="28" amount="32">arrow</item>
+        <item slot="3" amount="32">log</item>
+        <chestplate>leather chestplate</chestplate>
+        <leggings enchantment="PROTECTION_ENVIRONMENTAL:1">leather leggings</leggings>
+    </kit>
+    <kit name="Tier 3" parents="spawn">
+        <item slot="0">stone sword</item>
+        <item slot="1">bow</item>
+        <item slot="28" amount="48">arrow</item>
+        <item slot="3" amount="48">log</item>
+        <chestplate enchantment="PROTECTION_ENVIRONMENTAL:1">leather chestplate</chestplate>
+        <leggings enchantment="PROTECTION_ENVIRONMENTAL:1 PROTECTION_FIRE:1">leather leggings</leggings>
+    </kit>
+    <kit name="Tier 4" parents="spawn">
+        <item>stone sword</item>
+        <item>bow</item>
+        <item amount="64">arrow</item>
+        <item amount="64">log</item>
+        <helmet enchantment="PROTECTION_PROJECTILE:1">leather helmet</helmet>
+        <chestplate enchantment="PROTECTION_ENVIRONMENTAL:1">chainmail chestplate</chestplate>
+        <leggings enchantment="PROTECTION_ENVIRONMENTAL:1">chainmail leggings</leggings>
+        <boots enchantment="PROTECTION_PROJECTILE:1">leather boots</boots>
+    </kit>
+    <kit name="Tier 5" parents="spawn">
+        <item slot="0" enchantment="DAMAGE_ALL:2">iron sword</item>
+        <item slot="1" enchantment="ARROW_FIRE:1 ARROW_KNOCKBACK:1 ARROW_DAMAGE:1">bow</item>
+        <item slot="28" amount="64">arrow</item>
+        <item slot="3" amount="64">log</item>
+        <item enchantment="DAMAGE_ALL:2">iron sword</item>
+        <item enchantment="PROTECTION_ENVIRONMENTAL:2">iron helmet</item>
+        <item enchantment="PROTECTION_ENVIRONMENTAL:1">diamond chestplate</item>
+        <item enchantment="PROTECTION_ENVIRONMENTAL:1">diamond leggings</item>
+        <item enchantment="PROTECTION_ENVIRONMENTAL:2">iron boots</item>
     </kit>
 </kits>
 <spawns>
-    <spawn team="attackers" kit="spawn" yaw="0">
+    <spawn team="attackers" yaw="0">
         <block>142.5,28,-104.5</block>
     </spawn>
     <spawn team="defenders" kit="spawn" yaw="180">
@@ -79,14 +123,30 @@
 </regions>
 <modes>
     <mode after="1m" material="95" name="`eAttackers Released"/>
-    <mode after="5m" material="95:1" name="`e[Name] Class Unlocked"/>
-    <mode after="10m" material="95:2"name="`e[Name] Class Unlocked"/>
-    <mode after="13m" material="95:3" name="`e[Name] Class Unlocked"/>
-    <mode after="15m" material="95:4" name="`e[Name] Class Unlocked"/>
-    <mode after="17m" material="95:5" name="`e[Name] Class Unlocked"/>
+    <mode after="5m" material="95:1" name="`eTier 2 Kit Unlocked"/>
+    <mode after="10m" material="95:2" name="`eTier 3 Kit Unlocked"/>
+    <mode after="13m" material="95:3" name="`eTier 4 Kit Unlocked"/>
+    <mode after="15m" material="95:4" name="`eTier 5 Kit Unlocked"/>
 </modes>
-<destroyables>
-    <destroyable owner="defenders" materials="emerald or sponge ect.">
+<destroyables name="Monument" materials="emerald or sponge ect.">
+    <destroyable owner="defenders">
+        <cuboid min="x,y,z" max="x,y,z"/>
+    </destroyable>
+</destroyables>
+<destroyables materials="95:1;95:2;95:33;95:4;95:5" owner="defenders" completeion="0%" mode-changes="true">
+    <destroyable name="Tier 1">
+        <cuboid min="x,y,z" max="x,y,z"/>
+    </destroyable>
+    <destroyable name="Tier 2">
+        <cuboid min="x,y,z" max="x,y,z"/>
+    </destroyable>
+    <destroyable name="Tier 3">
+        <cuboid min="x,y,z" max="x,y,z"/>
+    </destroyable>
+    <destroyable name="Tier 4">
+        <cuboid min="x,y,z" max="x,y,z"/>
+    </destroyable>
+    <destroyable name="Tier 5">
         <cuboid min="x,y,z" max="x,y,z"/>
     </destroyable>
 </destroyables>
@@ -143,70 +203,6 @@
             <item amount="2">iron ingot</item>
         </drops>
     </rule>
-    <!--Attackers Blocks-->
-    <rule>
-        <block>birck</block>
-        <drops>
-            <item>wood sword</item>
-            <item>leather leggings</item>
-            <item>bow</item>
-            <item amount="16">arrow</item>
-            <item amount="16">wood</item>
-        </drops>
-        <wrongtool>true</wrongtool>
-    </rule>
-    <rule>
-        <block>lapis ore</block>
-        <drops>
-            <item>wood sword</item>
-            <item enchantment="PROTECTION_ENVIRONMENTAL:1">leather leggings</item>
-            <item>leather chestplate</item>
-            <item>bow</item>
-            <item amount="32">arrow</item>
-            <item amount="32">log</item>
-        </drops>
-        <wrongtool>true</wrongtool>
-    </rule>
-    <rule>
-        <block>redstone ore</block>
-        <drops>
-            <item>stone sword</item>
-            <item enchantment="PROTECTION_ENVIRONMENTAL:1 PROTECTION_FIRE:1">leather leggings</item>
-            <item enchantment="PROTECTION_ENVIRONMENTAL:1">leather chestplate</item>
-            <item>bow</item>
-            <item amount="48">arrow</item>
-            <item amount="48">log</item>
-        </drops>
-        <wrongtool>true</wrongtool>
-    </rule>
-    <rule>
-        <block>diamond block</block>
-        <drops>
-            <item>stone sword</item>
-            <item enchantment="PROTECTION_ENVIRONMENTAL:1">chainmail leggings</item>
-            <item enchantment="PROTECTION_ENVIRONMENTAL:1">chainmail chestplate</item>
-            <item enchantment="PROTECTION_PROJECTILE:1">leather helmet</item>
-            <item enchantment="PROTECTION_PROJECTILE:1">leather boots</item>
-            <item>bow</item>
-            <item amount="64">arrow</item>
-            <item amount="64">log</item>
-        </drops>
-        <wrongtool>true</wrongtool>
-    </rule>
-    <rule>
-        <block>obsidian</block>
-        <drops>
-            <item enchantment="DAMAGE_ALL:2">iron sword</item>
-            <item enchantment="PROTECTION_ENVIRONMENTAL:1">diamond leggings</item>
-            <item enchantment="PROTECTION_ENVIRONMENTAL:1">diamond chestplate</item>
-            <item enchantment="PROTECTION_ENVIRONMENTAL:2">iron helmet</item>
-            <item enchantment="PROTECTION_ENVIRONMENTAL:2">iron boots</item>
-            <item enchantment="ARROW_FIRE:1 ARROW_KNOCKBACK:2 ARROW_DAMAGE:2">bow</item>
-            <item amount="64">arrow</item>
-            <item amount="64">log</item>
-        </drops>
-        <wrongtool>true</wrongtool>
-    </rule>
     <!--Defenders Drops-->
     <rule>
         <block>anvil</block>
@@ -231,18 +227,6 @@
     </rule>
 </blockdrops>
 <renewables>
-<!--Defenders renewables -->
-    <renewable rate="1" grow="false" particles="false" sound="false" avoid-entities="false">
-        <region>
-            <cuboid min="124,16,-98" max="160,16,-93"/>
-        </region>
-        <renew>brick</renew>
-        <renew>redstone ore</renew>
-        <renew>lapis ore</renew>
-        <renew>diamond block</renew>
-        <renew>obsidian</renew>
-        <replace>air</replace>
-    </renewable>
     <renewable rate="1" grow="false" particles="false" sound="false" avoid-entities="false">
         <region>
             <cuboid min="165,14,58" max="186,18,95"/>
