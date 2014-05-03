@@ -115,6 +115,7 @@
     <union name="spawns">
         <rectangle name="Defenders-spawn" min="165,58" max="186,95"/>
         <rectangle name="Attackers-spawn" min="114,-91" max="171,-119"/>
+        <rectangle name="Attackers-air-spawn" min="x,y,z" max="x,y,z"/>
     </union>
     <rectangle name="defenders-area" min="96,95" max="189,20"/>
     <apply block="no-void" message="You may not edit this area!">
