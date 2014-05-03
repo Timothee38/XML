@@ -88,7 +88,7 @@
         <block>diamond block</block>
         <block>obsidian</block>
     </filter>
-    <filter name="no-void" parents="allow-all">
+    <filter name="no-void">
         <not><void/></not>
     </filter>
     <filter name="portal-defender">
