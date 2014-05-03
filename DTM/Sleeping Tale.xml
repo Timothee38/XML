@@ -175,9 +175,9 @@
     <mode after="13m" material="95:3" name="`eTier 4 Kit Unlocked"/>
     <mode after="17m" material="95:4" name="`eTier 5 Kit Unlocked"/>
 </modes>
-<destroyables name="Monument" materials="emerald or sponge ect.">
+<destroyables name="Monument" materials="emerald block;obsidian;gold block;cobble wall">
     <destroyable owner="defenders">
-        <cuboid min="x,y,z" max="x,y,z"/>
+        <cuboid min="106,16,72" max="109,20,75"/>
     </destroyable>
 </destroyables>
 <destroyables materials="95:1;95:2;95:33;95:4;95:5" owner="defenders" completeion="0%" mode-changes="true">
