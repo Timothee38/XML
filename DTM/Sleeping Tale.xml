@@ -10,6 +10,8 @@
 </authors>
 <contributors>
     <contributor contribution="Back wall design and feedback">Lyzak</contributor>
+    <contributor contribution="Moral help">Captain_Elliott</contributor>
+    <contributor contribution="Aestheics and moral help">Push_red_button</contributor>
 </contributors>
 <teams>
     <team color="blue" max="12" max-overfill="12">Defenders</team>
@@ -222,6 +224,7 @@
     <tool>bow</tool>
     <tool>wood pickaxe</tool>
 </toolrepair>
+<blockdrops>
     <rule>
         <block>coal ore</block>
         <drops>
