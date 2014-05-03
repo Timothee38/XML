@@ -68,7 +68,7 @@
 </kits>
 <spawns>
     <spawn team="attackers" yaw="0">
-        <cuboid min="141,34,-151" max="144,34,-147"
+        <cuboid min="141,34,-151" max="144,34,-147"/>
     </spawn>
     <spawn team="defenders" kit="spawn" yaw="180">
         <block>175.5,18,88.5"</block>
@@ -164,7 +164,8 @@
     </apply>
     <apply kit="Tier-4">
         <cuboid name="apply-kit-4" min="140,34,-131" max="145,36,-127"/>
-    </apply><apply kit="Tier-5">
+    </apply>
+    <apply kit="Tier-5">
         <cuboid name="apply-kit-5" min="131,34,-131" max="137,36,-127"/>
     </apply>
 </regions>
@@ -269,39 +270,38 @@
 </renewables>
 <include src="tutorial.xml"/>
 <tutorial>
-    <stage title="A/D Capture the Wool">
-    <message>
-        <line>`rThis map is a `a`lAttack/Defend Capture the Wool `r(CTW) map</line>
-        <line>The objective for the attackers is to grab the wool on the other team's side and return it to your base. Defends must guard it for 20 minutes</line>
-    </message>
-    <teleport>
-        <point yaw="0" pitch="50">108,26,55</point>
-    </teleport>
+    <stage title="A/D the Monument">
+        <message>
+            <line>`rThis map is a `a`lAttack/Defend the Monument `r(DTM) map</line>
+            <line>The objective for the attackers is to grab the wool on the other team's side and return it to your base. Defends must guard it for 20 minutes</line>
+        </message>
+        <teleport>
+            <point yaw="0" pitch="50">108,26,55</point>
+        </teleport>
     </stage>
     <stage title="Attackers Spawn">
-    <message>
-        <line>This is where the `dattackers 'rwill spawn. They get delayed for one minute the first time</line>
-        <line>'lBreak 'rthe blocks on the floor to get a kit</line>
-    </message>
-    <teleport>
-        <point yaw="180" pitch="50">143,30,-85</point>
-    </teleport>
-    </stage>
-    <stage title="Victory Monument">
-    <message>
-        <line>This where you have to place the 'dmagenta 'rwool in order to win the game!</line>
-    </message>
-    <teleport>
-        <point yaw="180" pitch="50">142,16,-88</point>
-    </teleport>
+        <message>
+            <line>This is where the `dattackers 'rwill spawn. They get delayed for one minute</line>
+        </message>
+        <teleport>
+            <point yaw="0" pitch="50">143,34,-150</point>
+        </teleport>
     </stage>
     <stage title="Coal and Iron Cave">
-    <message>
-        <line>This cave is rich in iron and coal ore. Coal ore drops two 'l'4TNT 'r blocks.</line>
-    </message>
-    <teleport>
-        <point yaw="0" pitch="50">145,20</point>
-    </teleport>
+        <message>
+            <line>This cave is rich in iron and coal ore. Coal ore drops two `l`4TNT `r blocks.</line>
+        </message>
+        <teleport>
+            <point yaw="0" pitch="50">145,20,-37</point>
+        </teleport>
+    </stage>
+    <stage title="Monument">
+        <message>
+            <line>This is the `lmonument `ryou must defend or destory this whithin 20 minutes</line>
+        </message>
+        <teleport>
+            <point yaw="0" pitch="5-">107,20,57</point>
+        </teleport>
     </stage>
 </tutorial>
 <portals>
@@ -312,6 +312,22 @@
     <!-- Portal high to low -->
     <portal y="-11" z="-28">
         <cuboid name="portal-2" min="142,30,27" max="143,27,28"/>
+    </portal>
+    <!--Spawn portals-->
+    <portal x="@142" y="@20" z="-109">
+        <region name="apply-kit-1"/>
+    </portal>
+    <portal x="@142" y="@20" z="-109">
+        <region name="apply-kit-2"/>
+    </portal>
+    <portal x="@142" y="@20" z="-109">
+        <region name="apply-kit-3"/>
+    </portal>
+    <portal x="@142" y="@20" z="-109">
+        <region name="apply-kit-4"/>
+    </portal>
+    <portal x="@142" y="@20" z="-109">
+        <region name="apply-kit-5"/>
     </portal>
 </portals>
 </map>
