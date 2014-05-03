@@ -183,7 +183,7 @@
         <cuboid min="106,16,72" max="109,20,75"/>
     </destroyable>
 </destroyables>
-<destroyables materials="95:1;95:2;95:33;95:4;95:5" owner="defenders" completeion="0%" mode-changes="true">
+<destroyables materials="95:1;95:2;95:33;95:4;95:5;95:15" owner="defenders" completeion="0%" mode-changes="true">
     <destroyable name="Tier 1">
         <region name="kit-room-1"/>
     </destroyable>
