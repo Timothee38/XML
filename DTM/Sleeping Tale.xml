@@ -59,11 +59,11 @@
         <item slot="1" enchantment="ARROW_FIRE:1 ARROW_KNOCKBACK:1 ARROW_DAMAGE:1">bow</item>
         <item slot="28" amount="64">arrow</item>
         <item slot="3" amount="64">log</item>
-        <item enchantment="DAMAGE_ALL:2">iron sword</item>
-        <item enchantment="PROTECTION_ENVIRONMENTAL:2">iron helmet</item>
+        <item enchantment="DAMAGE_ALL:1">iron sword</item>
+        <item enchantment="PROTECTION_ENVIRONMENTAL:1">iron helmet</item>
         <item enchantment="PROTECTION_ENVIRONMENTAL:1">diamond chestplate</item>
         <item enchantment="PROTECTION_ENVIRONMENTAL:1">diamond leggings</item>
-        <item enchantment="PROTECTION_ENVIRONMENTAL:2">iron boots</item>
+        <item enchantment="PROTECTION_ENVIRONMENTAL:1">iron boots</item>
     </kit>
 </kits>
 <spawns>
