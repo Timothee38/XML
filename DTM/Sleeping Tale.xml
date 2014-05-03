@@ -21,14 +21,14 @@
         <item slot="8" amount="10">apple</item>
         <potion duration="2" amplifier="1">heal</potion>
     </kit>
-    <kit name="Tier 1" parents="spawn">
+    <kit name="Tier-1" parents="spawn">
         <item slot="0">wood sword</item>
         <item slot="1">bow</item>
         <item slot="28" amount="16">arrow</item>
         <item slot="3" amount="16">wood</item>
         <leggings>leather leggings</leggings>
     </kit>
-    <kit name="Tier 2" parents="spawn">
+    <kit name="Tier-2" parents="spawn">
         <item slot="0">wood sword</item>
         <item slot="1">bow</item>
         <item slot="28" amount="32">arrow</item>
@@ -36,7 +36,7 @@
         <chestplate>leather chestplate</chestplate>
         <leggings enchantment="PROTECTION_ENVIRONMENTAL:1">leather leggings</leggings>
     </kit>
-    <kit name="Tier 3" parents="spawn">
+    <kit name="Tier-3" parents="spawn">
         <item slot="0">stone sword</item>
         <item slot="1">bow</item>
         <item slot="28" amount="48">arrow</item>
@@ -44,18 +44,18 @@
         <chestplate enchantment="PROTECTION_ENVIRONMENTAL:1">leather chestplate</chestplate>
         <leggings enchantment="PROTECTION_ENVIRONMENTAL:1 PROTECTION_FIRE:1">leather leggings</leggings>
     </kit>
-    <kit name="Tier 4" parents="spawn">
-        <item>stone sword</item>
-        <item>bow</item>
-        <item amount="64">arrow</item>
-        <item amount="64">log</item>
+    <kit name="Tier-4" parents="spawn">
+        <item slot="0">stone sword</item>
+        <item slot="1">bow</item>
+        <item amount="64" slot="28">arrow</item>
+        <item amount="64" slot="3">log</item>
         <helmet enchantment="PROTECTION_PROJECTILE:1">leather helmet</helmet>
         <chestplate enchantment="PROTECTION_ENVIRONMENTAL:1">chainmail chestplate</chestplate>
         <leggings enchantment="PROTECTION_ENVIRONMENTAL:1">chainmail leggings</leggings>
         <boots enchantment="PROTECTION_PROJECTILE:1">leather boots</boots>
     </kit>
-    <kit name="Tier 5" parents="spawn">
-        <item slot="0" enchantment="DAMAGE_ALL:2">iron sword</item>
+    <kit name="Tier-5" parents="spawn">
+        <item slot="0" enchantment="DAMAGE_ALL:1">iron sword</item>
         <item slot="1" enchantment="ARROW_FIRE:1 ARROW_KNOCKBACK:1 ARROW_DAMAGE:1">bow</item>
         <item slot="28" amount="64">arrow</item>
         <item slot="3" amount="64">log</item>
@@ -68,7 +68,7 @@
 </kits>
 <spawns>
     <spawn team="attackers" yaw="0">
-        <block>142.5,28,-104.5</block>
+        <cuboid min="141,34,-151" max="144,34,-147"
     </spawn>
     <spawn team="defenders" kit="spawn" yaw="180">
         <block>175.5,18,88.5"</block>
@@ -93,19 +93,19 @@
         <team>defenders</team>
     </filter>
     <!--For timed kits-->
-    <filter name="Tier 1">
+    <filter name="Tier-1-only">
         <block>95</block>
     </filter>
-    <filter name="Tier 2">
+    <filter name="Tier-2-only">
         <block>95:1</block>
     </filter>
-    <filter name="Tier 3">
+    <filter name="Tier-3-only">
         <block>95:2</block>
     </filter>
-    <filter name="Tier 4">
+    <filter name="Tier-4-only">
         <block>95:3</block>
     </filter>
-    <filter name="Tier 5">
+    <filter name="Tier-5-only">
         <block>95:4</block>
     </filter>
 </filters>
@@ -137,20 +137,35 @@
         <region name="spawns"/>
     </apply>
     <!--Protecting and applying kits -->
-    <apply block="Tier 1" message="This kit will unlock one minute into the game">
-        <cuboid name="Kit-room-1" min="x,y,z" max="x,y,z"/>
+    <apply block="Tier-1-only" message="This kit will unlock one minute into the game">
+        <cuboid name="Kit-room-1" min="156,34,-142" max="157,36,-137"/>
     </apply>
-    <apply block="Tier 2" message="This kit will unlock four minutes into the game">
-        <cuboid name="Kit-room-2" min="x,y,z" max="x,y,z"/>
+    <apply block="Tier-2-only" message="This kit will unlock four minutes into the game">
+        <cuboid name="Kit-room-2" min="128,34,-142" max="129,36,-137"/>
     </apply>
-    <apply block="Tier 3" message="This kit will unlock seven minutes into the game">
-        <cuboid name="Kit-room-3" min="x,y,z" max="x,y,z"/>
+    <apply block="Tier-3-only" message="This kit will unlock seven minutes into the game">
+        <cuboid name="Kit-room-3" min="148,34,-132" max="152,36,-131"/>
     </apply>
-    <apply block="Tier 4" message="This kit will unlock thirt-teen minutes into the game">
-        <cuboid name="Kit-room-4" min="x,y,z" max="x,y,z"/>
+    <apply block="Tier-4-only" message="This kit will unlock thirt-teen minutes into the game">
+        <cuboid name="Kit-room-4" min="131,34,-132" max="137,36,-131"/>
     </apply>
-    <apply block="Tier 5" message="This kit will unlock seven-teen minutes into the game">
-        <cuboid name="Kit-room-5" min="x,y,z" max="x,y,z"/>
+    <apply block="Tier-5-only" message="This kit will unlock seven-teen minutes into the game">
+        <cuboid name="kit-room-5" min="140,34,-132" max="145,36,-131"/>
+    </apply>
+    <!--Applying Kits -->
+    <apply kit="Tier-1">
+        <cuboid name="apply-kit-1" min="157,34,-142" max="161,36,-137"/>
+    </apply>
+    <apply kit="Tier-2">
+        <cuboid name="apply-kit-2" min="124,34,-142" max="127,36,-137"/>
+    </apply>
+    <apply kit="Tier-3">
+        <cuboid name="apply-kit-3" min="152,34,-131" max="147,36,-127"/>
+    </apply>
+    <apply kit="Tier-4">
+        <cuboid name="apply-kit-4" min="140,34,-131" max="145,36,-127"/>
+    </apply><apply kit="Tier-5">
+        <cuboid name="apply-kit-5" min="131,34,-131" max="137,36,-127"/>
     </apply>
 </regions>
 <modes>
@@ -167,32 +182,24 @@
 </destroyables>
 <destroyables materials="95:1;95:2;95:33;95:4;95:5" owner="defenders" completeion="0%" mode-changes="true">
     <destroyable name="Tier 1">
-        <cuboid min="x,y,z" max="x,y,z"/>
+        <region name="kit-room-1"/>
     </destroyable>
     <destroyable name="Tier 2">
-        <cuboid min="x,y,z" max="x,y,z"/>
+        <region name="kit-room-2"/>
     </destroyable>
     <destroyable name="Tier 3">
-        <cuboid min="x,y,z" max="x,y,z"/>
+        <region name="kit-room-3"/>
     </destroyable>
     <destroyable name="Tier 4">
-        <cuboid min="x,y,z" max="x,y,z"/>
+        <region name="kit-room-4"/>
     </destroyable>
     <destroyable name="Tier 5">
-        <cuboid min="x,y,z" max="x,y,z"/>
+        <region name="kit-room-5"/>
     </destroyable>
 </destroyables>
 <time result="defenders">20m</time>
 <maxbuildheight>35</maxbuildheight>
 <difficulty>3</difficulty>
-<itemremove>
-    <item>string</item>
-    <item>brick</item>
-    <item>flint</item>
-    <item>redstone</item>
-    <item>lapis</item>
-    <item>diamond block</item>
-</itemremove>
 <toolrepair>
     <tool>iron helmet</tool>
     <tool>iron chestplate</tool>
@@ -212,16 +219,8 @@
     <tool>iron sword</tool>
     <tool>stone sword</tool>
     <tool>bow</tool>
-    <tool>iron pickaxe</tool>
     <tool>wood pickaxe</tool>
-    <tool>stone pickaxe</tool>
 </toolrepair>
-<mobs>
-    <filter>
-        <spawn>natural</spawn>
-    </filter>
-</mobs>
-<blockdrops>
     <rule>
         <block>coal ore</block>
         <drops>
