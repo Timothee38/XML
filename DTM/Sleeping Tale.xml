@@ -303,7 +303,7 @@
             <line>This is the `lmonument `ryou must defend or destory this whithin 20 minutes</line>
         </message>
         <teleport>
-            <point yaw="0" pitch="5-">107,20,57</point>
+            <point yaw="0" pitch="50">107,20,57</point>
         </teleport>
     </stage>
 </tutorial>
