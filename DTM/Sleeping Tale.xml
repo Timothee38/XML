@@ -238,7 +238,7 @@
             <item>iron pickaxe</item>
             <item>stone sword</item>
             <item>bow</item>
-            <item amount="32">arrows</item>
+            <item amount="64">arrows</item>
         </drops>
         <wrongtool>true</wrongtool>
     </rule>
@@ -250,6 +250,7 @@
             <item>chainmail leggings</item>
             <item>iron boots</item>
             <item amount="16">log</item>
+            <item amount="5">iron ingot</item>
         </drops>
         <wrongtool>true</wrongtool>
     </rule>
