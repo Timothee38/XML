@@ -20,7 +20,7 @@
 <kits>
     <kit name="spawn">
         <item slot="2">wood pickaxe</item>
-        <item slot="8" amount="10">apple</item>
+        <item slot="8" amount="20">apple</item>
         <potion duration="2" amplifier="1">heal</potion>
     </kit>
     <kit name="Tier-1" parents="spawn">
@@ -73,7 +73,7 @@
         <cuboid min="141,34,-151" max="144,34,-147"/>
     </spawn>
     <spawn team="defenders" kit="spawn" yaw="180">
-        <block>175.5,18,88.5"</block>
+        <block>175.5,16,84.5"</block>
     </spawn>
     <default yaw="-90">
         <block>104.5,46,-45.5</block>
