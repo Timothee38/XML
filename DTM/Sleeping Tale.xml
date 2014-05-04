@@ -80,14 +80,6 @@
     </default>
 </spawns>
 <filters>
-    <filter name="spawn-protection">
-        <!--Classes items-->
-        <block>brick</block>
-        <block>lapis ore</block>
-        <block>redstone ore</block>
-        <block>diamond block</block>
-        <block>obsidian</block>
-    </filter>
     <filter name="no-void">
         <not><void/></not>
     </filter>
@@ -115,7 +107,7 @@
     <union name="spawns">
         <rectangle name="Defenders-spawn" min="165,58" max="186,95"/>
         <rectangle name="Attackers-spawn" min="114,-91" max="171,-119"/>
-        <rectangle name="Attackers-air-spawn" min="x,y,z" max="x,y,z"/>
+        <rectangle name="Attackers-air-spawn" min="123,-155" max="165,-126"/>
     </union>
     <rectangle name="defenders-area" min="96,95" max="189,20"/>
     <apply block="no-void" message="You may not edit this area!">
@@ -133,10 +125,10 @@
     <apply block="deny-blocks">
         <region name="portals"/>
     </apply>
-    <apply block="spawn-protection">
+    <apply block="deny-all">
         <region name="spawns"/>
     </apply>
-    <apply enter="spawn-protection">
+    <apply enter="deny-all">
         <region name="spawns"/>
     </apply>
     <!--Protecting and applying kits -->
