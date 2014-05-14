@@ -7,19 +7,17 @@
 	<author contribution="Design, Building, XML">ExaBerries</author>
 	<author contribution="Design, Building">PilotPinguin</author>
 </authors>
-
 <rules>
 	<rule>Fall damage is disabled!</rule>
 </rules>
 <rage/>
-<timelock>on</timelock>
 <score>
 	<time>5m</time>
 	<limit>-1</limit>
 </score>
 <teams>
 	<team color="green" max="16" max-overfill="32">Lime Team</team>
-	<team color="dark_aqua" max="16" max-overfill="32">Cyan Team</team>
+	<team color="dark aqua" max="16" max-overfill="32">Cyan Team</team>
 </teams>
 <kits>
 	<kit name="spawn" force="true">
@@ -52,7 +50,7 @@
 	<tool>bow</tool>
 </toolrepair>
 <killreward>
-	<item amount="1">arrow</item>
+	<item>arrow</item>
 </killreward>
 <spawns>
 	<spawn team="lime" kit="lime" yaw="45">
@@ -74,7 +72,6 @@
 	</filter>
 </filters>
 <regions>
-	
 	<apply enter="only-cyan" message="You may not enter the enemy team's base!">
 	        <cylinder name="dark aqua-base" base="-28,56,-60" height="12" radius="4"/>
 	</apply>
@@ -85,6 +82,7 @@
 		<rectangle min="-oo,-oo" max="oo,oo"/>
 	</apply>
 </regions>
+<timelock>on</timelock>
 <hunger>
 	<depletion>off</depletion>
 </hunger>
