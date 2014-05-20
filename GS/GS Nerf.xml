@@ -90,6 +90,7 @@
         </kit>
     </class>
     <class name="Spider" description="Shoot webs or use your spidey sense!" longdescription="A web bow to trap players and a spidey sense that activates when in the proximity of enemies!" icon="web">
+        <!-- Possible poison ability?-->
         <permission>gs.ability.webbow</permission>
         <permission>gs.ability.spideysense</permission>
         <kit parents="potions">
