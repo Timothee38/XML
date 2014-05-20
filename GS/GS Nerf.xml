@@ -14,6 +14,7 @@
 <classes family="ghost" sticky="true" restrict="true">
     <class name="Scout" description="Fast with knockback!" longdescription="You spawn with speed II and a stick that has knockback II. Perfect for knocking enemies around!" icon="feather">
         <kit parents="potions">
+            <potion duration="oo" amplifier="1">speed</potion>
             <item slot="0" name="`d`lNight Stick" enchantment="knockback:2" attributes="generic.movementSpeed:base:0.2">stick</item>
             <item slot="2" amount="16">cooked beef</item>
         </kit>
