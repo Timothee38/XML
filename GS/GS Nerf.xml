@@ -14,7 +14,8 @@
 <classes family="ghost" sticky="true" restrict="true">
     <class name="Scout" description="Fast with knockback!" longdescription="You spawn with speed II and a stick that has knockback II. Perfect for knocking enemies around!" icon="feather">
         <kit parents="potions">
-            <item slot="0" name="`d`lNight Stick" enchantment="knockback:2" attributes="generic.movementSpeed:base:0.5">stick</item>
+			<potion duration="oo" amplifier="1">speed</potion>
+            <item slot="0" name="`d`lNight Stick" enchantment="knockback:2" attributes="generic.movementSpeed:base:0.2">stick</item>
             <item slot="2" amount="16">cooked beef</item>
         </kit>
     </class>
@@ -56,9 +57,9 @@
     </class>
     <class name="Spawner" description="Spawn slimes, creepers, and more!" longdescription="Scare your enemies with slimes, creepers, skeletons, and zombies!" icon="monster egg">
         <kit parents="potions">
-            <item slot="0" amount="3" damage="55">monster egg</item>
-            <item slot="1" amount="3" damage="51">monster egg</item>
-            <item slot="3" amount="3" damage="54">monster egg</item>
+            <item slot="0" amount="2" damage="55">monster egg</item>
+            <item slot="1" amount="2" damage="51">monster egg</item>
+            <item slot="3" amount="2" damage="54">monster egg</item>
             <item slot="4" amount="1" damage="50">monster egg</item>
             <item slot="5" amount="16">cooked beef</item>
         </kit>
