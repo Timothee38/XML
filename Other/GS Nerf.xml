@@ -1,0 +1,127 @@
+<map proto="1.3.0">
+<rules>
+    <rule>
+        Do not prolong a match by avoiding combat and/or hiding in places that are inaccessible or difficult to get to.
+    </rule>
+</rules>
+<kits>
+    <kit name="potions">
+        <potion duration="oo" amplifier="2">damage resistance</potion>
+        <potion duration="oo" amplifier="1">increase damage</potion>
+        <potion duration="300" amplifier="1">invisibility</potion>
+    </kit>
+</kits>
+<classes family="ghost" sticky="true" restrict="true">
+    <class name="Scout" description="Fast with knockback!" longdescription="You spawn with speed II and a stick that has knockback II. Perfect for knocking enemies around!" icon="feather">
+        <kit parents="potions">
+            <item slot="0" name="`d`lNight Stick" enchantment="knockback:2">stick</item>
+            <item slot="2" amount="16">cooked beef</item>
+            <potion duration="oo" amplifier="2">speed</potion>
+        </kit>
+    </class>
+    <class name="Archer" default="true" description="Pew pew, lots of arrows!" longdescription="With a bow and 128 arrows that have been dipped in revealing potion, it is easy to follow enemies!" icon="bow">
+        <kit parents="potions">
+            <item slot="0" name="`3Reveal Bow" enchantment="thorns:1">bow</item>
+            <item slot="2" amount="16">cooked beef</item>
+            <item slot="3" amount="64" name="`3Reveal Arrow" enchantment="thorns:1">arrow</item>
+            <item slot="4" amount="64" name="`3Reveal Arrow" enchantment="thorns:1">arrow</item>
+        </kit>
+    </class>
+    <class name="Pyro" description="Light players on fire via bow or melee!" longdescription="A fire melee tool and 10 revealing arrows (with fire aspect) help you get several hits on an enemy!" icon="blaze rod">
+        <kit parents="potions">
+            <item slot="0" enchantment="arrow fire:1" name="`6`lFire Bow">bow</item>
+            <item slot="2" enchantment="fire aspect:1" name="`6`lFire Stick">blaze rod</item>
+            <item slot="3" amount="16">cooked beef</item>
+            <item slot="4" amount="10" name="`3Reveal Arrow" enchantment="thorns:1">arrow</item>
+        </kit>
+    </class>
+    <class name="Bruiser" description="Extra strength and a sword!" longdescription="A wooden sword and the ability to break cobwebs -- very useful for removing artifacts of the web bow!" icon="wood sword">
+        <permission>gs.ability.webbreak</permission>
+        <kit parents="potions">
+            <item slot="0" attributes="generic.movementSpeed:base:-0.5;generic.attackDamage:base:2.5">wood sword</item>
+            <item slot="2" amount="16">cooked beef</item>
+            <potion duration="oo" amplifier="1">slow</potion>
+        </kit>
+    </class>
+    <class name="Alchemist" description="Throw various helpful/harmful potions!" longdescription="A variety of potions that include poision, instant damage II, instant health II, and revealing!" icon="potion">
+            <kit parents="potions">
+            <item slot="0" amount="3" damage="16388">potion</item>
+            <!--  poision I  -->
+            <item slot="1" amount="3" damage="16428">potion</item>
+            <!--  instant damage II  -->
+            <item slot="3" amount="3" damage="16421">potion</item>
+            <!--  instant health II  -->
+            <item slot="4" amount="2" damage="16430" potions="invisibility:100:1:false" name="Splash Potion of Revealing">potion</item>
+            <!--  invisibility II  -->
+            <item slot="5" amount="16">cooked beef</item>
+            </kit>
+    </class>
+    <class name="Spawner" description="Spawn slimes, creepers, and more!" longdescription="Scare your enemies with slimes, creepers, skeletons, and zombies!" icon="monster egg">
+        <kit parents="potions">
+            <item slot="0" amount="6" damage="55">monster egg</item>
+            <item slot="1" amount="6" damage="51">monster egg</item>
+            <item slot="3" amount="6" damage="54">monster egg</item>
+            <item slot="4" amount="1" damage="50">monster egg</item>
+            <item slot="5" amount="16">cooked beef</item>
+        </kit>
+    </class>
+    <class name="Tracker" description="Easily track your enemys!" longdescription="View enemy footsteps and reveal them using the compass melee!" icon="compass">
+    <permission>gs.ability.revealpunch</permission>
+    <permission>gs.ability.track</permission>
+    <kit parents="potions">
+        <item slot="0" amount="1" name="`b`lSharp Locator">compass</item>
+        <item slot="2" amount="16">cooked beef</item>
+    </kit>
+    </class>
+    <class name="Leprachaun" description="Sticky XP Orbs with double jump!" longdescription="XP bar is a double-jump cooldown, use Bottle O' Enchanting to track enemies with XP orbs!" icon="exp bottle">
+        <permission>doublejump.use</permission>
+        <permission>gs.ability.agility</permission>
+        <kit parents="potions">
+            <item slot="0" amount="5" name="`a`lBottle o' Gold">exp bottle</item>
+        <item slot="2" amount="16">cooked beef</item>
+        </kit>
+    </class>
+    <class name="Demo" description="Place landmines or fire grenades!" longdescription="BOOM! Combine grenades and landmines together to destroy your enemies!" icon="tnt">
+        <permission>gs.ability.placelandmine</permission>
+        <permission>grenades.use</permission>
+        <kit parents="potions">
+            <item slot="0" amount="5" name="`4`lLand Mine">tnt</item>
+            <item slot="2" amount="5" name="`3Grenade">fireball</item>
+            <item slot="3" amount="16">cooked beef</item>
+        </kit>
+    </class>
+    <class name="Spider" description="Shoot webs or use your spidey sense!" longdescription="A web bow to trap players and a spidey sense that activates when in the proximity of enemies!" icon="web">
+        <permission>gs.ability.webbow</permission>
+        <permission>gs.ability.spideysense</permission>
+        <kit parents="potions">
+            <item slot="0" name="`a`lWeb Bow">bow</item>
+            <item slot="2" amount="16">cooked beef</item>
+            <item slot="3" amount="16">arrow</item>
+        </kit>
+    </class>
+    <class name="Ninja" description="Who? What? Where?" longdescription="Jump, speed, invisibility, ambient particles, and a grappling hook that pulls players towards you and reveals them when you retract it!" icon="fishing rod">
+        <kit>
+            <potion duration="oo" amplifier="2" ambient="true">damage resistance</potion>
+            <potion duration="oo" amplifier="1" ambient="true">increase damage</potion>
+            <potion duration="oo" amplifier="2" ambient="true">jump</potion>
+            <potion duration="oo" amplifier="1" ambient="true">speed</potion>
+            <potion duration="300" amplifier="2" ambient="true">invisibility</potion>
+            <item slot="0" name="`d`lGrapling Hook">fishing rod</item>
+            <item slot="2" amount="16">cooked beef</item>
+        </kit>
+    </class>
+</classes>
+<blitz>
+    <time>6m</time>
+    <broadcastLives>false</broadcastLives>
+    <title>Ghost Squadron</title>
+</blitz>
+<mobs>
+    <filter parents="deny-all">
+        <allow>
+            <spawn>spawner egg</spawn>
+        </allow>
+    </filter>
+</mobs>
+<ghostsquadron/>
+</map>
