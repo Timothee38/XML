@@ -12,18 +12,19 @@
     </kit>
 </kits>
 <classes family="ghost" sticky="true" restrict="true">
-    <class name="Scout" description="Fast with knockback!" longdescription="You spawn with speed II and a stick that has knockback II. Perfect for knocking enemies around!" icon="feather">
+    <class name="Scout" description="Fast with knockback!" longdescription="You spawn with speed I and a stick that has knockback II and an extra 20% speed. Perfect for knocking enemies around!" icon="stick">
         <kit parents="potions">
             <potion duration="oo" amplifier="1">speed</potion>
             <item slot="0" name="`d`lNight Stick" enchantment="knockback:2" attributes="generic.movementSpeed:base:0.2">stick</item>
             <item slot="2" amount="16">cooked beef</item>
         </kit>
     </class>
-    <class name="Archer" default="true" description="Pew pew, lots of arrows!" longdescription="With a bow and 64 arrows that have been dipped in revealing potion, it is easy to follow enemies!" icon="bow">
+    <class name="Archer" default="true" description="Pew pew, lots of arrows!" longdescription="With a bow and 128 arrows that have been dipped in revealing potion, it is easy to follow enemies!" icon="bow">
         <kit parents="potions">
             <item slot="0" name="`3Reveal Bow" enchantment="thorns:1">bow</item>
             <item slot="2" amount="16">cooked beef</item>
             <item slot="3" amount="64" name="`3Reveal Arrow" enchantment="thorns:1">arrow</item>
+            <item slot="4" amount="64" name="`3Reveal Arrow" enchantment="thorns:1">arrow</item>
         </kit>
     </class>
     <class name="Pyro" description="Light players on fire via bow or melee!" longdescription="A fire melee tool and 10 revealing arrows (with fire aspect) help you get several hits on an enemy!" icon="blaze rod">
@@ -57,14 +58,18 @@
     </class>
     <class name="Spawner" description="Spawn slimes, creepers, and more!" longdescription="Scare your enemies with slimes, creepers, skeletons, and zombies!" icon="monster egg">
         <kit parents="potions">
-            <item slot="0" amount="2" damage="55">monster egg</item>
+            <!-- Slime -->
+            <item slot="0" amount="3" damage="55">monster egg</item>
+            <!-- Skeleton -->
             <item slot="1" amount="2" damage="51">monster egg</item>
-            <item slot="3" amount="2" damage="54">monster egg</item>
+            <!---Zombie -->
+            <item slot="3" amount="3" damage="54">monster egg</item>
+            <!-- Creeper -->
             <item slot="4" amount="1" damage="50">monster egg</item>
             <item slot="5" amount="16">cooked beef</item>
         </kit>
     </class>
-    <class name="Tracker" description="Easily track your enemys!" longdescription="View enemy footsteps and reveal them using the compass melee!" icon="compass">
+    <class name="Tracker" description="Easily track your enemies!" longdescription="View enemy footsteps and reveal them using the compass melee!" icon="compass">
     <permission>gs.ability.revealpunch</permission>
     <permission>gs.ability.track</permission>
     <kit parents="potions">
@@ -95,8 +100,9 @@
         <permission>gs.ability.spideysense</permission>
         <kit parents="potions">
             <item slot="0" name="`a`lWeb Bow">bow</item>
-            <item slot="2" amount="16">cooked beef</item>
-            <item slot="3" amount="16">arrow</item>
+            <item slot="1" name="`a`lPoisoned Eye">spider eye</item>
+            <item slot="3" amount="16">cooked beef</item>
+            <item slot="4" amount="16">arrow</item>
         </kit>
     </class>
     <class name="Ninja" description="Who? What? Where?" longdescription="Jump, speed, invisibility, ambient particles, and a grappling hook that pulls players towards you and reveals them when you retract it!" icon="fishing rod">
@@ -106,7 +112,7 @@
             <potion duration="oo" amplifier="2" ambient="true">jump</potion>
             <potion duration="oo" amplifier="1" ambient="true">speed</potion>
             <potion duration="300" amplifier="2" ambient="true">invisibility</potion>
-            <item slot="0" name="`d`lGrapling Hook">fishing rod</item>
+            <item slot="0" enchantment="durability:1"name="`d`lGrapling Hook">fishing rod</item>
             <item slot="2" amount="16">cooked beef</item>
         </kit>
     </class>
@@ -123,5 +129,4 @@
         </allow>
     </filter>
 </mobs>
-<ghostsquadron/>
 </map>
