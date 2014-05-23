@@ -28,7 +28,7 @@
         <item slot="6" amount="32">cooked beef</item>
         <item slot="7" amount="4">golden apple</item>
         <item slot="8" amount="3">web</item>
-        <boots enchantment"protection fall:2" damage="-3000">iron</boots>
+        <boots enchantment="protection fall:2" damage="-3000">iron</boots>
     </kit>
     <kit name="yellow-spawn" parents="spawn">
         <item slot="4" damage="4">stained clay</item>
@@ -41,3 +41,34 @@
         <chestplate color="E5E533">leather</chestplate>
     </kit>
 </kits>
+<spawns>
+    <spawn team="yellow" kit="yellow-spawn" yaw="0">
+        <block>0.5,9,-76.5</block>
+    </spawn>
+    <spawn team ="orange" kit="orange-spawn" yaw="180">
+        <block>0.5,8,77.5</block>
+    </spawn>
+    <default>
+        <cuboid min="-3,16,-3" max="4,17,4"/>
+    </default>
+</spawns>
+<filters>
+    <filter name="only-yellow">
+        <team>yellow</team>
+    </filter>
+    <filter name="only-orange">
+        <team>orange</team>
+    </filter>
+    <filter name="deny-void">
+        <deny>
+            <void/>
+        </deny>
+    </filter>
+</filters>
+<regions>
+    <apply block="deny-void">
+        <negative>
+            
+        </negative>
+    </apply>
+</regions>
