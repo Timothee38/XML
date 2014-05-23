@@ -64,11 +64,68 @@
             <void/>
         </deny>
     </filter>
+    <filter name="iron-water-only">
+        <block>iron</block>
+        <block>water</block>
+    </filter>
 </filters>
 <regions>
     <apply block="deny-void">
         <negative>
-            
+            <rectangle min="44,59" max="-43,-58"/>
+            <!--Yellow -->
+            <rectangle min="-43,-141" max="-28,-102"/>
+            <rectangle min="29,-141" max="44,-102"/>
+            <!--Orange -->
+            <rectangle min="29,103" max="44,142"/>
+            <rectangle min="-43,103" max="-28,142"/>
         </negative>
     </apply>
+    <union name="yellow-wool-rooms">
+        <rectangle name="lime-wool" min="-43,-141" max="-28,-127"/>
+        <rectangle name="pink-wool" min="29,-141" max="44,-127"/>
+    </union>
+    <apply block="only-orange" message"Only orange may enter this area">
+        <region name="yellow-wool-rooms"/>
+    </apply>
+    <union name="orange-wool-rooms">
+        <rectangle name="blue-wool" min="29,128" max="44,142"/>
+        <rectangle name="lightblue-wool" min="-43,127" max="-28,142"/>
+    </union>
+    <apply block="only-yellow" message"Only yellow may enter this area">
+        <region name="orange-wool-rooms"/>
+    </apply>
+    <union name="spawns">
+        <rectangle name="spawn-orange" min="-11,72" max="12,104"/>
+        <rectangle name="spawn-yellow" min="-11,-104" max="11,-70"/>
+    </union>
+    <apply block="iron-water-only" message="You may only break iron or pick up water!">
+        <region name="spawns"/>
+    </apply>
+    <apply block="only-yellow" message="Only yellow may enter this area">
+        <region name="spawn-yellow"/>
+    </apply>
+    <apply block="only-orange" message"Only orange may enter this area">
+        <region name="ornge-spawn"/>
+    </apply>
 </regions>
+<destroyables name="Monument" materials="obsidian">
+    <destroyable owner="yellow">
+        <cuboid min="0,6,-42" max ="1.5,9,-43"/>
+    </destroyable>
+    <destroyable owner="orange">
+        <cuboid min="0,6,42" max ="1.5,9,43"/>
+    </destroyable>
+</destroyables>
+<itemremove>
+    <item>leather chestplate</item>
+    <item>iron boots</item>
+    <item>stone sword</item>
+    <item>bow</item>
+    <item>stained clay</item>
+</itemremove>
+<toolrepair>
+    <tool>arrow</tool>
+</toolrepair>
+<maxbuildheight>35</maxbuildheight>
+</map>
