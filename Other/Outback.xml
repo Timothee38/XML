@@ -117,6 +117,22 @@
         <cuboid min="0,6,42" max ="1.5,9,43"/>
     </destroyable>
 </destroyables>
+<wools team="yellow">
+    <wool color="light blue">
+        <block>-5,10,-78</block>
+    </wool>
+    <wool color="blue">
+        <block>5,10,-78</block>
+    </wool>
+</wools>
+<wools team="orange">
+    <wool color="lime">
+        <block>-5,10,78</block>
+    </wool>
+    <wool color="pink">
+        <block>5,10,78</block>
+    </wool>
+</wools> 
 <itemremove>
     <item>leather chestplate</item>
     <item>iron boots</item>
