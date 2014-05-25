@@ -82,7 +82,7 @@
 </spawns>
 <filters>
     <filter name="no-void">
-        <not><void/></not>
+        <deny><void/></deny>
     </filter>
     <filter name="portal-defender">
         <team>defenders</team>
@@ -126,10 +126,10 @@
     <apply block="deny-blocks">
         <region name="portals"/>
     </apply>
-    <apply block="deny-all">
+    <apply block="deny-all" message="You may not interact with blocks in spawn!">
         <region name="spawns"/>
     </apply>
-    <apply enter="deny-all">
+    <apply enter="deny-players" message="You may not renter spawn!">
         <region name="spawns"/>
     </apply>
     <!--Protecting and applying kits -->
