@@ -122,6 +122,7 @@
     <broadcastLives>false</broadcastLives>
     <title>Ghost Squadron</title>
 </blitz>
+</ghostsquadron>
 <mobs>
     <filter parents="deny-all">
         <allow>
