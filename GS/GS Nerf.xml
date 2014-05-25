@@ -16,13 +16,13 @@
         <kit parents="potions">
             <potion duration="oo" amplifier="1">speed</potion>
             <item slot="0" name="`d`lNight Stick" enchantment="knockback:2" attributes="generic.movementSpeed:base:0.2">stick</item>
-            <item slot="2" amount="16">cooked beef</item>
+            <item slot="2" amount="64">cooked beef</item>
         </kit>
     </class>
     <class name="Archer" default="true" description="Pew pew, lots of arrows!" longdescription="With a bow and 128 arrows that have been dipped in revealing potion, it is easy to follow enemies!" icon="bow">
         <kit parents="potions">
             <item slot="0" name="`3Reveal Bow" enchantment="thorns:1">bow</item>
-            <item slot="2" amount="16">cooked beef</item>
+            <item slot="2" amount="64">cooked beef</item>
             <item slot="3" amount="64" name="`3Reveal Arrow" enchantment="thorns:1">arrow</item>
             <item slot="4" amount="64" name="`3Reveal Arrow" enchantment="thorns:1">arrow</item>
         </kit>
@@ -31,7 +31,7 @@
         <kit parents="potions">
             <item slot="0" enchantment="arrow fire:1" name="`6`lFire Bow">bow</item>
             <item slot="2" enchantment="fire aspect:1" name="`6`lFire Stick">blaze rod</item>
-            <item slot="3" amount="16">cooked beef</item>
+            <item slot="3" amount="64">cooked beef</item>
             <item slot="4" amount="10" name="`3Reveal Arrow" enchantment="thorns:1">arrow</item>
         </kit>
     </class>
@@ -53,7 +53,7 @@
             <!--  instant health II  -->
             <item slot="4" amount="2" damage="16430" potions="invisibility:100:1:false" name="Splash Potion of Revealing">potion</item>
             <!--  invisibility II  -->
-            <item slot="5" amount="16">cooked beef</item>
+            <item slot="5" amount="64">cooked beef</item>
             </kit>
     </class>
     <class name="Spawner" description="Spawn slimes, creepers, and more!" longdescription="Scare your enemies with slimes, creepers, skeletons, and zombies!" icon="monster egg">
@@ -66,15 +66,15 @@
             <item slot="3" amount="3" damage="54">monster egg</item>
             <!-- Creeper -->
             <item slot="4" amount="1" damage="50">monster egg</item>
-            <item slot="5" amount="16">cooked beef</item>
+            <item slot="5" amount="64">cooked beef</item>
         </kit>
     </class>
     <class name="Tracker" description="Easily track your enemies!" longdescription="View enemy footsteps and reveal them using the compass melee!" icon="compass">
     <permission>gs.ability.revealpunch</permission>
     <permission>gs.ability.track</permission>
     <kit parents="potions">
-        <item slot="0" amount="1" name="`b`lSharp Locator">compass</item>
-        <item slot="2" amount="16">cooked beef</item>
+        <item slot="0" amount="1" name="`b`lPlayer Locator">compass</item>
+        <item slot="2" amount="64">cooked beef</item>
     </kit>
     </class>
     <class name="Leprachaun" description="Sticky XP Orbs with double jump!" longdescription="XP bar is a double-jump cooldown, use Bottle O' Enchanting to track enemies with XP orbs!" icon="exp bottle">
@@ -82,7 +82,7 @@
         <permission>gs.ability.agility</permission>
         <kit parents="potions">
             <item slot="0" amount="5" name="`a`lBottle o' Gold">exp bottle</item>
-            <item slot="2" amount="16">cooked beef</item>
+            <item slot="2" amount="64">cooked beef</item>
         </kit>
     </class>
     <class name="Demo" description="Place landmines or fire grenades!" longdescription="BOOM! Combine grenades and landmines together to destroy your enemies!" icon="tnt">
@@ -91,7 +91,7 @@
         <kit parents="potions">
             <item slot="0" amount="5" name="`4`lLand Mine">tnt</item>
             <item slot="2" amount="5" name="`3Grenade">fireball</item>
-            <item slot="3" amount="16">cooked beef</item>
+            <item slot="3" amount="64">cooked beef</item>
         </kit>
     </class>
     <class name="Spider" description="Shoot webs or use your spidey sense!" longdescription="A web bow to trap players and a spidey sense that activates when in the proximity of enemies!" icon="web">
@@ -101,7 +101,7 @@
         <kit parents="potions">
             <item slot="0" name="`a`lWeb Bow">bow</item>
             <item slot="1" name="`a`lPoisoned Eye">spider eye</item>
-            <item slot="3" amount="16">cooked beef</item>
+            <item slot="3" amount="64">cooked beef</item>
             <item slot="4" amount="16">arrow</item>
         </kit>
     </class>
@@ -113,7 +113,7 @@
             <potion duration="oo" amplifier="1" ambient="true">speed</potion>
             <potion duration="300" amplifier="2" ambient="true">invisibility</potion>
             <item slot="0" enchantment="durability:1"name="`d`lGrapling Hook">fishing rod</item>
-            <item slot="2" amount="16">cooked beef</item>
+            <item slot="2" amount="64">cooked beef</item>
         </kit>
     </class>
 </classes>
