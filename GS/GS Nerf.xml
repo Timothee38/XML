@@ -39,7 +39,7 @@
         <permission>gs.ability.webbreak</permission>
         <kit parents="potions">
             <item slot="0" attributes="generic.movementSpeed:base:-0.5;generic.attackDamage:base:2.5">wood sword</item>
-            <item slot="2" amount="16">cooked beef</item>
+            <item slot="2" amount="64">cooked beef</item>
             <potion duration="oo" amplifier="1">slow</potion>
         </kit>
     </class>
